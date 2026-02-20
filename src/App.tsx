@@ -217,14 +217,9 @@ function App() {
                   </div>
                   <h3 className="text-xl font-bold text-cyan-400">{category.title}</h3>
                 </div>
-                <ul className="space-y-2">
-                  {category.skills.map((skill, skillIdx) => (
-                    <li key={skillIdx} className="text-gray-400 text-sm flex items-start gap-2">
-                      <ChevronRight size={16} className="text-cyan-400 mt-0.5 flex-shrink-0" />
-                      <span>{skill}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-gray-400 text-sm">
+                  {category.skills.join(', ')}
+                </p>
               </div>
             ))}
           </div>
