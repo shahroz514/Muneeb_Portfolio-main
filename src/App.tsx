@@ -191,41 +191,21 @@ function App() {
       <section id="skills" className="relative py-20 px-4">
         <div className="max-w-6xl mx-auto relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-            Core <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Expertise</span>
+            Technical <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Skills</span>
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              {
-                title: 'AI / LLMs',
-                icon: Brain,
-                skills: ['LangChain, LangGraph, CrewAI, AutoGen', 'Hugging Face', 'OpenAI Assistants API, Claude, Gemini', 'RAG pipelines, agentic workflows', 'NLP + automation']
-              },
-              {
-                title: 'Backend / APIs',
-                icon: Database,
-                skills: ['Python: FastAPI, Django, Flask, DRF', 'Node.js', 'REST + GraphQL', 'Celery, Streamlit', 'Stripe, Twilio, PayPal, Binance, SendGrid']
-              },
-              {
-                title: 'Frontend',
-                icon: Code2,
-                skills: ['React.js, Next.js', 'Vue.js', 'Angular (MEAN)', 'MERN', 'TailwindCSS, HTML5, CSS3, TypeScript, jQuery']
-              },
-              {
-                title: 'Cloud / DevOps',
-                icon: Cloud,
-                skills: ['AWS (Lambda, S3, EC2)', 'GCP, Azure', 'Docker, Kubernetes', 'GitHub Actions, GitLab CI/CD', 'Monitoring/observability tools']
-              },
-              {
-                title: 'Databases',
-                icon: Database,
-                skills: ['PostgreSQL, MySQL', 'MongoDB, DynamoDB', 'Redis']
-              },
-              {
-                title: 'Testing / SQA',
-                icon: CheckCircle2,
-                skills: ['Pytest, Unittest', 'Locust, JMeter', 'Selenium Testing']
-              }
+              { title: 'Programming Languages', icon: Code2, skills: ['Python', 'Node.js', 'JavaScript', 'TypeScript'] },
+              { title: 'AI Frameworks', icon: Brain, skills: ['LangChain', 'LangGraph', 'CrewAI', 'AutoGen', 'CamelAI', 'AgnoAI'] },
+              { title: 'AI Integrations', icon: Cloud, skills: ['OpenAI Assistants API', 'Claude API', 'Gemini API', 'IBM Watson', 'Azure AI'] },
+              { title: 'API Development & Integrations', icon: Database, skills: ['REST & GraphQL APIs', 'Stripe', 'Twilio', 'Google Maps', 'Google Drive', 'Snowflake', 'Binance', 'MailChimp', 'TensorFlow Serving', 'Custom APIs'] },
+              { title: 'Web (Backend)', icon: Briefcase, skills: ['Django', 'DRF', 'Flask', 'FastAPI', 'Streamlit', 'Celery', 'AI Suite', 'Semantic Kernel'] },
+              { title: 'Databases', icon: Database, skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'DynamoDB', 'Redis'] },
+              { title: 'Web (Frontend)', icon: Code2, skills: ['React.js', 'Next.js', 'Vue.js', 'Angular (MEAN)', 'MERN', 'TailwindCSS', 'HTML5', 'CSS3', 'JavaScript (ES6+)', 'TypeScript', 'jQuery'] },
+              {title: 'DevOps & Cloud / Testing', icon: GitBranch, skills: ['AWS (Lambda, S3, EC2)', 'GCP', 'Azure', 'Docker', 'Kubernetes', 'GitHub Actions', 'GitLab CI/CD', 'Pytest', 'Unittest', 'Locust', 'JMeter', 'Selenium Testing']},
+              { title: 'Web Scraping', icon: Rocket, skills: ['Selenium', 'Playwright', 'Scrapy', 'BeautifulSoup4', 'ScraperGraph AI'] },
+              
             ].map((category, idx) => (
               <div
                 key={idx}
@@ -249,6 +229,8 @@ function App() {
             ))}
           </div>
         </div>
+
+        
       </section>
 
       {/* Achievements Section */}
@@ -420,6 +402,8 @@ function App() {
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
             Featured <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Projects</span>
           </h2>
+
+          <p className="text-xl md:text-2xl text-gray-400 mb-8 text-center">Building systems that solve real problems</p>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
@@ -659,10 +643,26 @@ function App() {
           </div> */}
 
           <div className="mt-8 text-center">
-            <button className="inline-flex items-center gap-2 px-6 py-3 border-2 border-cyan-500 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300">
-              <Download size={20} />
-              Download Resume
-            </button>
+            <div className="flex justify-center gap-4">
+              <a
+                href="/resume.pdf"
+                download
+                className="inline-flex items-center gap-2 px-6 py-3 border-2 border-cyan-500 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300"
+              >
+                <Download size={20} />
+                Download Resume
+              </a>
+
+              <a
+                href="https://calendly.com/muneebdev3/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 border-2 border-cyan-500 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300"
+              >
+                <ExternalLink size={20} />
+                Schedule Call
+              </a>
+            </div>
           </div>
         </div>
       </section>
